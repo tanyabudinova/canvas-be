@@ -18,7 +18,8 @@ export class PostsService {
     p2.id = 2;
     p2.description = 'Pizza';
     p2.image = 'https://www.allrecipes.com/thmb/fFW1o307WSqFFYQ3-QXYVpnFj6E=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/48727-Mikes-homemade-pizza-DDMFS-beauty-4x3-BG-2974-a7a9842c14e34ca699f3b7d7143256cf.jpg';
-    return [p1, p2];
+    const p3  = new Post(3, "Harold :)", "https://upload.wikimedia.org/wikipedia/en/a/a4/Hide_the_Pain_Harold_%28Andr%C3%A1s_Arat%C3%B3%29.jpg")
+    return [p1, p2, p3];
   }
 
   findOne(id: number) {
