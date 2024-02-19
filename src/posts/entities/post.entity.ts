@@ -1,8 +1,6 @@
 import { Column, Table, Model, PrimaryKey, AutoIncrement } from 'sequelize-typescript';
 
-@Table({
-    tableName: 'Post',
-  })
+@Table
 export class Post extends Model {
 
     @PrimaryKey
@@ -11,9 +9,9 @@ export class Post extends Model {
     id: number;
 
     @Column
-    description: string;
+    description: string | null;
 
     @Column
-    image: string;
+    image: string | null;
 
 }
