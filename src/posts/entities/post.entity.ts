@@ -1,14 +1,19 @@
-export class Post {
+import { Column, Table, Model, PrimaryKey, AutoIncrement } from 'sequelize-typescript';
 
-    id: number = -1;
+@Table({
+    tableName: 'Post',
+  })
+export class Post extends Model {
 
-    description: string = 'None';
+    @PrimaryKey
+    @AutoIncrement
+    @Column
+    id: number;
 
-    image: string = 'None';
+    @Column
+    description: string;
 
-    constructor(id?: number, descr?: string, img?: string){
-        this.id = id !== undefined ? id: this.id;
-        this.description = descr !== undefined ? descr: this.description;
-        this.image = img !== undefined ? img: this.image;
-    }
+    @Column
+    image: string;
+
 }
